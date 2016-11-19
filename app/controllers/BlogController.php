@@ -14,7 +14,6 @@ class BlogController
     {
         if (!$post = Post::id($id)) return Request::error404();
         $post->comments = Comment::where('post_id', $post->id);
-        foreach ($post->comments as $comment) $comment->user = User::id($comment->user_id);
         return view('pages.post', ['post' => $post]);
     }
 
@@ -64,6 +63,7 @@ class BlogController
         $comment = new Comment();
         $comment->fromArray($data);
         if (User::checkAuth()) $comment->user_id = User::current()->id;
+        $comment->user_name = User::checkAuth() ? User::current()->name : $data['name'];
         $comment->post_id = $post_id;
         $comment->save();
         back([

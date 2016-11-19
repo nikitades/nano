@@ -9,12 +9,12 @@
                 '/register' => 'Регистрация'
             ]
         ]) ?>
-        <div class="row">
-            <div class="col-md-6">
-                <? Flash::display() ?>
-                <? nanolink('forms.register_form', ['data' => Flash::data()]) ?>
-            </div>
-        </div>
+        <? Flash::display() ?>
+        <? if (User::checkAuth()) { ?>
+            <? nanolink('blocks.notification', ['type' => 'success', 'text' => 'Вы уже авторизованы!']) ?>
+        <? } else { ?>
+            <? nanolink('forms.register_form', ['data' => Flash::data()]) ?>
+        <? } ?>
     </div>
 </div>
 </body>

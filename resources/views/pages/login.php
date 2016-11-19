@@ -10,7 +10,11 @@
             ]
         ]) ?>
         <? Flash::display() ?>
-        <? nanolink('forms.login_form', ['data' => Flash::data()]) ?>
+        <? if (User::checkAuth()) { ?>
+            <? nanolink('blocks.notification', ['type' => 'success', 'text' => 'Вы уже авторизованы!']) ?>
+        <? } else { ?>
+            <? nanolink('forms.login_form', ['data' => Flash::data()]) ?>
+        <? } ?>
     </div>
 </div>
 </body>

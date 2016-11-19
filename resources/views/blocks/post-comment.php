@@ -19,7 +19,7 @@
                         break;
                 }
                 ?>
-                <strong><?= !empty($comment->user) ? $comment->user->name : 'Аноним' ?></strong> <span
+                <strong><?= !empty($comment->user_name) ? $comment->user_name : 'Аноним' ?></strong> <span
                     class="text-muted"><?= $time_phrase ?> назад</span>
             </div>
             <div class="panel-body">

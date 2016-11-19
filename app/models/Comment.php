@@ -9,6 +9,7 @@ class Comment extends Model
     protected $table = 'comments';
     protected $writable = [
         'user_id',
+        'user_name',
         'post_id',
         'text'
     ];

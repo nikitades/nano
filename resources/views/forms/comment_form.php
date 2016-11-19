@@ -2,14 +2,14 @@
     <? if (User::checkAuth()) { ?>
         <div class="form-group">
             <label for="name">Имя:</label>
-            <input type="text" class="form-control" id="name" disabled="disabled"
+            <input type="text" name="name" class="form-control" id="name" disabled="disabled"
                    value="<?= User::current()->name ?>">
         </div>
     <? } else { ?>
         <div class="form-group">
             <label for="name">Имя:</label>
             <input name="name" type="text" class="form-control" id="name"
-                   value="<?= !empty($data['name']) ? $data['name'] : '' ?>">
+                   value="<?= !empty($data['name']) ? $data['name'] : 'Аноним' ?>">
         </div>
     <? } ?>
     <div class="form-group">

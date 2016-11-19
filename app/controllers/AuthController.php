@@ -21,6 +21,9 @@ class AuthController
     public function login()
     {
         $data = Request::fetch('email:ne', 'password:ne', 'remember');
+        if (User::checkAuth()) back([
+            'form_data' => $data
+        ]);
         if (!Validator::ok()) {
             back([
                 'flash' => Validator::$errors,
@@ -58,6 +61,9 @@ class AuthController
     public function register()
     {
         $data = Request::fetch('name:ne', 'password:len@8', 'email:email');
+        if (User::checkAuth()) back([
+            'form_data' => $data
+        ]);
         if (!Validator::ok()) {
             back([
                 'flash' => Validator::$errors,
