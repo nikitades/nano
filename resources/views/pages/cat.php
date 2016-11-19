@@ -1,5 +1,4 @@
 <? nanolink('blocks.head') ?>
-<body>
 <div class="container">
    <div class="row">
        <div class="nano buffer">
@@ -15,5 +14,4 @@
        </div>
    </div>
 </div>
-</body>
-</html>
+<? nanolink('blocks.footer') ?>

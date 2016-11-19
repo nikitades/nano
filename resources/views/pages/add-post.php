@@ -1,5 +1,4 @@
 <? nanolink('blocks.head', ['title' => 'Добавление поста']) ?>
-<body>
 <? nanolink('blocks.header') ?>
 <div class="container">
     <div class="row">
@@ -19,5 +18,4 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+<? nanolink('blocks.footer') ?>

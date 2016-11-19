@@ -5,3 +5,4 @@
     <? nanolink('blocks.includes') ?>
     <title><?= !empty($title) ? $title : ucfirst(dpl('title')) ?></title>
 </head>
+<body>

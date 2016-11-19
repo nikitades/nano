@@ -1,5 +1,4 @@
 <? nanolink('blocks.head', ['title' => 'Регистрация']) ?>
-<body>
 <? nanolink('blocks.header') ?>
 <div class="container">
     <div class="row">
@@ -17,5 +16,4 @@
         <? } ?>
     </div>
 </div>
-</body>
-</html>
+<? nanolink('blocks.footer') ?>
