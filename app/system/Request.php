@@ -25,6 +25,9 @@ class Request
 
     public function fill()
     {
+        Path::track('/nano', function () {
+            nanolink('pages.cat');
+        });
         require_once '../app/pathfinder.php';
     }
 
@@ -125,7 +128,7 @@ class Request
 
     public static function error404()
     {
-        header( $_SERVER['SERVER_PROTOCOL']." 404 Not Found", true );
+        header($_SERVER['SERVER_PROTOCOL'] . " 404 Not Found", true);
         return view('pages.error404');
     }
 }
