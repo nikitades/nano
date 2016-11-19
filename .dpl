@@ -1,0 +1,14 @@
+#This is the example file, but working though.
+TITLE = The nano project!
+
+SHOW_ERRORS = true
+CHECK_ENDING = false
+
+
+DB_DRIVER    = mysql || probably should make the driver for all the reliable DB types
+DB_HOST      = localhost
+DB_NAME      = nano
+DB_USER      = nanouser
+DB_PASSWORD  = nanopass
+
+SALT        = sodigjawroigujw40ia0p94itpwoefikaspo

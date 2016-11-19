@@ -1,0 +1,74 @@
+/* Global styles */
+
+.buffer {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.buffer-top {
+    margin-top: 25px;
+}
+
+.buffer-bottom, .buffer-bot {
+    margin-bottom: 25px;
+}
+
+@media (max-width: 767px) {
+    .buffer-xs {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .buffer-top-xs {
+        margin-top: 25px;
+    }
+
+    .buffer-bottom-xs, .buffer-bot-xs {
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 768px) {
+    .buffer-sm {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .buffer-top-sm {
+        margin-top: 25px;
+    }
+
+    .buffer-bottom-sm, .buffer-bot-sm {
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    .buffer-md {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .buffer-top-md {
+        margin-top: 25px;
+    }
+
+    .buffer-bottom-md, .buffer-bot-md {
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .buffer-lg {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .buffer-top-lg {
+        margin-top: 25px;
+    }
+
+    .buffer-bottom-lg, .buffer-bot-lg {
+        margin-bottom: 25px;
+    }
+}
